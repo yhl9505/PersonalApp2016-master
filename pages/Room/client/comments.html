@@ -1,0 +1,25 @@
+<template name="comments">
+	<h1>You can find people who want to share a room here.</h1>
+	<textarea rows="10" cols="50">
+		You can type here to find people who want to share their room or who want a room to share.
+	</textarea>
+	<br>
+	<br>
+	<button class="js-submit-comment btn btn-lg btn-info">Submit comment</button>
+
+
+	<ul>
+		{{#each c in commentsdata}}   
+			{{> commentRow comment=c}}<!--commentsdata should be defined in js-->
+			
+		{{/each}}
+	</ul>
+</template>
+
+
+<template name="commentRow">
+	<li>
+		{{comment.rating}},{{comment.createdAt}},{{comment.text}}:{{comment.userEmail}}
+		<span class="js-delete-comment glyphicon glyphicon-remove" aria-hidden="true"></span>
+	</li>
+</template>
