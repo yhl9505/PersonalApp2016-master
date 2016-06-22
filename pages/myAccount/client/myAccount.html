@@ -1,7 +1,16 @@
 <template name="myAccount">
 <h1>You can manage your account here</h1>
-<h2>I don't finish this page becasue there are some features that I cant do.</h2>
+
 
 <input type="submit" name="click this">
-	
+ 
+{{# each r in Room}}
+
+<p>You reserved the<a href="/roomOnAccount/{{r._id}}"> {{r.name}}</a></p>
+
+
+</template>
+
+<template name="roomOnAccount">
+	<p>here is your room</p>
 </template>

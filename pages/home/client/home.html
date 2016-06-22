@@ -1,5 +1,7 @@
 <template name="home">
 
+
+
 <style type="text/css">
 body{
 	background-image: url("http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_3000,w_1200,f_auto,q_90/v1/381813/ariel_ueprrv.jpg" );
@@ -8,8 +10,22 @@ body{
 }
 </style>
 <div class="jumbotron">
+<div class="{{theColor}}">
 	<h1>Check it!</h1>
 	<p>This app allows you to reserve the room you want in Brandeis and see the availablitiy of any room or desk.</p>
+
+	<select class="js-color">
+		<option>bg-info</option>
+		<option>bg-warning</option>
+	</select>
+
+
+	Color:{{theColor}}<br>
+	Counter: {{theCounter}}<br>
+
+	</div>
+
+	<button class="js-pusher">Push me</button>
 	{{#if currentUser}}
 		<h2>Now, find the Room you want!</h2>
 		<select>
