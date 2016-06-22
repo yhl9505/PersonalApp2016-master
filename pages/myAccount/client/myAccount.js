@@ -1,6 +1,6 @@
 Template.myAccount.helper({
 
-	retunnRoom: function(){
+	returnRoom: function(){
 		return Room.find();
 	}
 })
