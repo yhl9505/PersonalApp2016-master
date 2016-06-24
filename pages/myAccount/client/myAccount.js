@@ -1,6 +1,6 @@
-Template.myAccount.helper({
+Template.myAccount.helpers({
 
-	returnRoom: function(){
+	Rooms: function(){
 		return Room.find();
 	}
 })

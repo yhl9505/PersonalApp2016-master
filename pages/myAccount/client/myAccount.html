@@ -4,14 +4,15 @@
 
 <input type="submit" name="click this">
  
-{{# each r in Room}}
-
+ <ul>
+{{# each r in Rooms}}
+<li>
 <p>You reserved the<a href="/roomOnAccount/{{r._id}}"> {{r.name}}</a></p>
-
+</li>
 {{/each}}
-
+</ul>
 </template>
 
 <template name="roomOnAccount">
-	<p>here is your room</p>
+	<p>here is your room -- {{name}}</p>
 </template>
