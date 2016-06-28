@@ -21,7 +21,7 @@ Template.home.events({
 			window.alert("You must choose the right time!   The end time cannot be earlier than or same as the start time");
 		}
 		else{
-			window.location="http://129.64.155.117:3000/map";
+			window.location="http://localhost:3000/map";
 		}
 
 		
@@ -72,6 +72,10 @@ Template.home.events({
 		instance.state.set("counter", 1+instance.state.get("counter"));
 		
 	},
+
+		// "click .js": function(){
+			// it should transite user to the map page.
+		// }
 
 
 
