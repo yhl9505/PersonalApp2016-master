@@ -26,7 +26,7 @@ Template.commentRow.events({
 		"click .js-delete-comment":function(event){
 		console.log("clicked on the x");
 		console.dir(this);
-		Comments.remove(this.comment_);
+		Meteor.call("removeCommentobj", this.comment._id);
 
 		}
 	})
