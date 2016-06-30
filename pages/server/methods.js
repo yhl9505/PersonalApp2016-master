@@ -10,10 +10,11 @@ Meteor.methods({
 			
 	},
 
-	createCommentobj:function(comment_text){
+	createCommentobj:function(name,comment_text){
 		console.log("create comment log");
 		const comment_obj=
 		{
+			name:name,
 			text:comment_text,
 			createAt: new Date(),
 			createBy: Meteor.userId(),

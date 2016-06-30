@@ -1,2 +1,2 @@
-Meteor.subscribe("theComments");
+Meteor.subscribe("theComments","tim");
 Meteor.subscribe("theSettings");

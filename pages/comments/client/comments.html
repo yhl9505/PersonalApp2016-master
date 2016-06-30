@@ -1,6 +1,11 @@
 <template name="comments">
 	<h1>You can find people who want to share a room here.</h1>
 	<h2>You can type here to find people who want to share their room or who want a room to share.</h2>
+	<hr>
+	
+	<li>Name:<input type="text" class="js-username"></li>
+	<br>
+	<br>
 	<textarea rows="10" cols="50" class="js-user-comment">
 		
 	</textarea>
@@ -21,7 +26,7 @@
 
 <template name="commentRow">
 	<li>
-		{{comment.createdAt}},{{comment.userEmail}}:{{comment.text}}
+		{{comment.name}},{{comment.createdAt}},{{comment.userEmail}}:{{comment.text}}
 		<span class="js-delete-comment glyphicon glyphicon-remove" aria-hidden="true"></span>
 	</li>
 </template>
