@@ -30,17 +30,23 @@ Meteor.methods({
 	},
 
 
-	getInfo:function(name,weight,height,id){
+	getInfo:function(name,weight,height){
+		const id=this.userId;
+		const result={name:name,weight:weight,height:height,createdBy:id};
+		console.dir(result);
 		console.log("you called the meteor method!");
-		if(Settings.findOne({createBy:id})==null){
-			const result={name:name,weight:weight,height:height,createBy:id}
-			Settings.insert(result);
-		}else{
-			Settings.update({createBy:id},{
-				$set:{name:name}})
-		}
+		Settings.remove({createdBy:id});
+		Settings.insert(result);
+		
 		
 	},
+
+
+	cretedRoom: function(number){
+		console.log("you're creating the room");
+		Room.insert(number);
+		console.log("do we get here");
+	}
 
 
 

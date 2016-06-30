@@ -1,14 +1,16 @@
 <template name="myAccount">
 <h1>You can manage your account here</h1>
 
-
-<input type="submit" name="click this">
+<li>room number:<input type="text" class="js-room"></li>
+<br>
+<button class="js-room-submit btn btn-lg btn-info">Submit</button>
  
  <ul>
 {{# each r in Rooms}}
-<li>
-<p>You reserved the<a href="/roomOnAccount/{{r._id}}"> {{r.name}}</a></p>
-</li>
+	{{> roomOnAcoount name=r}}
+	<li>
+	<p>You reserved the<a href="/roomOnAccount/{{r._id}}"> {{r.name}}</a></p>
+	</li>
 {{/each}}
 </ul>
 

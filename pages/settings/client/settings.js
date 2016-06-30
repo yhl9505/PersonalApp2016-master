@@ -21,7 +21,7 @@ Template.settings.events({
 		console.log(settings_weight);
 		console.log(settings_height);
 		const id=Meteor.userId();
-		Meteor.call('getInfo',settings_name,settings_weight,settings_height,id);
+		Meteor.call("getInfo",settings_name,settings_weight,settings_height);
 		console.log("did you get here");
-	}
+	},
 })

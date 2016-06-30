@@ -12,11 +12,8 @@ Template.comments.events({
 			window.alert("you must enter a comment!");
 			return;
 		}
-		// const comment_rating= $(".js-rating-comment").val();
 		Meteor.call('createCommentobj',comment_text);
-		
 		$(".js-user-comment").val("");	
-		
 		console.log("Did we get here")
 		
 	}
