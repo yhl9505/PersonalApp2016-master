@@ -1,0 +1,31 @@
+<template name="settings">
+	
+	<h1>Put your info here</h1>
+	<br>
+	<li>name: <input type="text" class="js-text-name"></li>
+	<br>
+	<li>weight:<input type="text" class="js-text-weight"></li>
+	<br>
+	<li>height:<input type="text" class="js-text-height"></li>
+	<br>
+	<br>
+	<hr>
+		<ul>
+			{{#each c in personalInfo}}
+				{{> getprint info=c}}
+			{{/ each}}
+		</ul>
+
+
+
+
+
+	<button class="js-info-submit btn btn-lg btn-info">Submit</button>
+
+</template>
+
+
+<template name="getprint">
+	<p>you get here ! getPrint</p>
+	<li> your name is {{info.name}}</li>
+</template>

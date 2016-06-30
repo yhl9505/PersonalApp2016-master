@@ -13,3 +13,15 @@ Meteor.publish("userData",function(){
 		this.ready();
 	}
 });
+
+
+Meteor.publish("theSettings", function(){
+	console.log("here meteor publish ");
+	var currentUserId=this.userId;
+	if(this.userId){
+		return Meteor.Settings.find({createdBy:currentUserId});
+	}else{
+		this.ready();
+	}
+	
+})

@@ -30,6 +30,19 @@ Meteor.methods({
 	},
 
 
+	getInfo:function(name,weight,height,id){
+		console.log("you called the meteor method!");
+		if(Settings.findOne({createBy:id})==null){
+			const result={name:name,weight:weight,height:height,createBy:id}
+			Settings.insert(result);
+		}else{
+			Settings.update({createBy:id},{
+				$set:{name:name}})
+		}
+		
+	},
+
+
 
 	// insertRoom: function(roomOBJ ){
 	// 	//roomOBJ is the object passed in
