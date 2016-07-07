@@ -15,8 +15,8 @@ Template.settings.events({
 	"click .js-info-submit": function(event){
 		console.log("get here");
 		const settings_name= $(".js-text-name").val();
-		const settings_weight= $(".js-text-weight").val();
-		const settings_height= $(".js-text-height").val();
+		const settings_weight= parseInt($(".js-text-weight").val());
+		const settings_height= parseInt($(".js-text-height").val());
 		console.log(settings_name);
 		console.log(settings_weight);
 		console.log(settings_height);

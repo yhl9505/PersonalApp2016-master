@@ -4,6 +4,8 @@
 <li>room number:<input type="text" class="js-room"></li>
 <br>
 <button class="js-room-submit btn btn-lg btn-info">Submit</button>
+<br>
+<br>
  
  <ul>
 {{# each r in Rooms}}
@@ -13,9 +15,34 @@
 	</li>
 {{/each}}
 </ul>
+<hr>
+<h1>Room</h1>
+<h2>Here is the reactive part</h2>
+{{> roomAvailability}}
+<br>
+<hr>
 
 </template>
 
 <template name="roomOnAccount">
 	<p>here is your room -- {{name}}</p>
+</template>
+
+<template name="roomAvailability">
+	<select calss="room list">
+		<option value="library">Library </option>
+		<option value="gzang">Gzang</option>
+	</select>
+
+	<br>
+	{{# if libraryChosen}}
+		<div calss="libraryRoom">
+			<ul>
+				<li>112</li>
+				<li>113</li>
+				<li>114</li>
+			</ul>
+		</div>
+	{{/if}}
+
 </template>

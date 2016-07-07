@@ -10,21 +10,18 @@ body{
 }
 </style>
 <div class="jumbotron">
-<div class="{{theColor}}">
+	<div class="{{theColor}}">
 
+		<h1>Check it!</h1>
+		<p>This app allows you to reserve the room you want in Brandeis and see the availablitiy of any room or desk.</p>
 
+		<select class="js-color">
+			<option>bg-info</option>
+			<option>bg-warning</option>
+		</select>
 
-	<h1>Check it!</h1>
-	<p>This app allows you to reserve the room you want in Brandeis and see the availablitiy of any room or desk.</p>
-
-	<select class="js-color">
-		<option>bg-info</option>
-		<option>bg-warning</option>
-	</select>
-
-
-	Color:{{theColor}}<br>
-	Counter: {{theCounter}}<br>
+		Color:{{theColor}}<br>
+		Counter: {{theCounter}}<br>
 
 	</div>
 
@@ -40,6 +37,9 @@ body{
 		<br>
 		<br>
 		<br>
+		<h1>The reactive part is on the MyAcoount page</h1>
+		<br>
+		<hr>
 		Date:(we can only reserve the room within one month)
 		<input type="text" name="inputDate">month/day/year
 		<br>
