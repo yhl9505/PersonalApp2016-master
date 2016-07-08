@@ -1,12 +1,12 @@
 Meteor.startup(function(){
 	Room.remove({});
-	Room.insert({name:"room111",location:"gym",days:[1,2,3,4,5],timefrom:[6],timeto:[9]});
-	Room.insert({name:"room112",location:"gym",days:[1,2,3,4,5],timefrom:[6],timeto:[9]});		
-	Room.insert({name:"room113",location:"gym",days:[1,2,3,4,5],timefrom:[6],timeto:[9]});
-	Room.insert({name:"room114",location:"gym",days:[1,2,3,4,5],timefrom:[6],timeto:[9]});
-	Room.insert({name:"room115",location:"gym",days:[1,2,3,4,5],timefrom:[6],timeto:[9]});
-	Room.insert({name:"room116",location:"gym",days:[1,2,3,4,5],timefrom:[6],timeto:[9]});
-	Room.insert({name:"room117",location:"gym",days:[1,2,3,4,5],timefrom:[6],timeto:[9]});
+	Room.insert({name:"111",location:"Farber",days:[],timefrom:[],timeto:[]});
+	Room.insert({name:"112",location:"Farber",days:[],timefrom:[],timeto:[]});		
+	Room.insert({name:"113",location:"Farber",days:[],timefrom:[],timeto:[]});
+	Room.insert({name:"114",location:"Farber",days:[],timefrom:[],timeto:[],available:true});
+	Room.insert({name:"115",location:"Farber",days:[],timefrom:[],timeto:[],available:true});
+	Room.insert({name:"116",location:"Farber",days:[],timefrom:[],timeto:[],available:true});
+	Room.insert({name:"117",location:"Farber",days:[],timefrom:[],timeto:[],available:true});
 
 	Comments.insert({content:""});
 

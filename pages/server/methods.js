@@ -1,8 +1,5 @@
 Meteor.methods({
-	sayhiServer: function(){
-		console.log("hi");
-	},
-
+	
 	removeRoom: function(pw){
 		check(pw,String);
 		if(pw=="123"){
@@ -50,15 +47,27 @@ Meteor.methods({
 		
 	},
 
+	createRoom: function(name,numb1,numb2,date){
+		check(name,Number);
+		check(numb1,Number);
+		check(numb2,Number);
+		check(date,String);
+		const starttime=numb1;
+		const endtime=numb2;
+		const dateReserve=date;
 
-	cretedRoom: function(number){
-		check(number,String);
 		console.log("you're creating the room");
-		Room.insert(number);
+		const roomOBJ={
+			name:name,
+			timefrom:starttime,
+			timeto:endtime,
+			days:dateReserve,
+		}
+		Room.insert(roomOBJ);
 		console.log("do we get here");
 	},
 
-
+	
 
 
 

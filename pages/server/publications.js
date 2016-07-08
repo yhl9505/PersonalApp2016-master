@@ -1,7 +1,7 @@
 
 
 Meteor.publish("theRoom",function(){return Room.find();})
-Meteor.publish("theComments",function(teachername){return Comments.find({name:teachername});})
+Meteor.publish("theComments",function(){return Comments.find({});})
 
 
 Meteor.publish("userData",function(){

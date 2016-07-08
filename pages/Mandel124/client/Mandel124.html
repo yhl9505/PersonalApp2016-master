@@ -1,39 +1,11 @@
-<template name="home">
-
-
-
-<style type="text/css">
-body{
-	background-image: url("http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,h_3000,w_1200,f_auto,q_90/v1/381813/ariel_ueprrv.jpg" );
-	background-size: 1200px, 1200px;
-
-}
-</style>
-<div class="jumbotron">
-	
-
-		<h1>Check it!</h1>
-		<p>This app allows you to reserve the room you want in Brandeis and see the availablitiy of any room.</p>
-
-
-	{{#if currentUser}}
-		<h2>Now, find the Room you want!</h2>
-		<select>
-			<option>Library</option>
-			<option>Shapiro Campus Center</option>
-			<option>Gzang </option>
-			<option>Gym </option>
-		</select>
-		<br>
-		<hr>
-		Date:(we can only reserve the room within one month)
-		<input type="text" class="inputdate" >month/day/year
-		<br>
-		<br>
-
-		<form method="link" action="hiddenRoom.html">
-		Time from:
-		<select id="startTime">
+<template name="Mandel124">
+<h1>Here you can reserve Mandel 124</h1>
+	<h2>Please select the time you want.</h2>
+	<img src="http://www.dermadyarchitects.com/wp-content/uploads/2011/09/DA_MCHBU_13.jpg">
+	<br>
+	<hr>
+	Time From:
+	<select id="startTime">
 			<option value="1">8:00 am</option>
 			<option value="2">9:00 am</option>
 			<option value="3">10:00 am</option>
@@ -70,22 +42,12 @@ body{
 			<option value="14">9:00 pm</option>
 			<option value="15">10:00 pm</option>
 		</select>
-<br>
-<br>
-		</form>
-			<button class="btn btn-default js" type="button" onclick="return checkForm()"><a href="{{pathFor 'hiddenRoom'}}">Sumbit</a></button>
-
-
-	{{else}}
-		<h2>You must log in to first.</h2>
-	{{/if}}
-
-
-
-</div>
-
-
-
-
+		<br>
+		<br>
+		Date:(we can only reserve the room within one month)
+		<input type="text" class="inputdate" >month/day/year
+		<br>
+		<hr>
+		<button class="btn btn-default js" type="button" onclick="return checkForm()"><a href="">Sumbit</a></button>
 
 </template>

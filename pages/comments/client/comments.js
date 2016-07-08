@@ -6,14 +6,16 @@ Template.comments.helpers({
 
 Template.comments.events({
 	"click .js-submit-comment":function(event){
+
 		event.preventDefault();
 		const name=$(".js-username").val();
 		const comment_text= $(".js-user-comment").val();
+		const date= new Date();
 		if(comment_text==""){
 			window.alert("you must enter a comment!");
 			return;
 		}
-		Meteor.call('createCommentobj',name,comment_text);
+		Meteor.call('createCommentobj',name,comment_text,date);
 		$(".js-user-comment").val("");	
 		console.log("Did we get here")
 		

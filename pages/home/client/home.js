@@ -1,31 +1,51 @@
+
+
 Template.home.events({
 
 	"click .js":function(event){
 		console.log("clicked on the button");
 		//get the start time
-		var s1 = document.getElementById("startTime");
-		var starttime = s1.options[s1.selectedIndex].value;
-		var numb1= parseInt($('#startTime').val());
+		const s1 = document.getElementById("startTime");
+		const starttime = s1.options[s1.selectedIndex].value;
+		const numb1= parseInt($('#startTime').val());
 		console.log("starttime is"+ starttime);
 		console.log("numb1 is"+ numb1);
 		
 		//get the end time
-		var s2 = document.getElementById("endTime");
-		var endtime = s1.options[s2.selectedIndex].value;
-		var numb2 = parseInt($('#endTime').val());
+		const s2 = document.getElementById("endTime");
+		const endtime = s1.options[s2.selectedIndex].value;
+		const numb2 = parseInt($('#endTime').val());
 		console.log("endtime is"+endtime);
 		console.log("numb2 is "+numb2);
 
 		//compare
 		if(numb2<=numb1){
 			window.alert("You must choose the right time!   The end time cannot be earlier than or same as the start time");
-		}
-		else{
-			window.location="http://localhost:3000/map";
-		}
-
+			function checkForm(){
+				return false;
+  		     }
+  		 }else{
+    		function checkForm(){
+    			return true;
+    		}
+   		}
+	
 		
-	}
+		//get the date
+		const date= $(".inputdate").val();
+		console.log(date);
+
+		const roomNumber=parseInt((Math.random()*1000)+1);
+		console.log("roomNumber is "+ roomNumber);
+		console.log("numb1 is"+numb1);
+		console.log("numb2 is "+numb2);
+		Meteor.call("createRoom",roomNumber,numb1,numb2,date);
+		
+	},
+
+
+
+
 
 
 })
@@ -45,16 +65,7 @@ Template.home.onCreated(function() {
 
 
 Template.home.helpers({
-  theColor: function(){
 
-    const instance = Template.instance();
-    return instance.state.get("color");
-  },
-
-  theCounter: function(){
-    const instance = Template.instance();
-    return instance.state.get("counter");
-  },
 
 })
 
@@ -67,19 +78,10 @@ Template.home.events({
 		//change the color field of the satet object ..
 	},
 
-		"click .js-pusher":function(event,instance){
-		// const counter= instance.state.get("counter");
-		instance.state.set("counter", 1+instance.state.get("counter"));
-		
-	},
-
-		// "click .js": function(){
-			// it should transite user to the map page.
-		// }
-
-
 
 })
+
+
 
 
 
