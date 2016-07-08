@@ -1,0 +1,46 @@
+<template name="Quiz4">
+
+	<h1>Quiz4 </h1>
+	<br>
+	<p>By Haolin Yuan</p>
+
+	<div class="row">	
+		<div class="col-md-5 col-md-offset-0 bg-info">
+		<p>first column</p>
+		<h2>Update your bio below</h2>
+		<br>
+		<li>Name:  <input type="text" class="js-name"></li>
+		Bio:
+		<br>
+		<textarea rows="10" cols="50" class="js-content"></textarea>
+		<button class="js-updateBio ">Update Bio</button>
+		</div>
+
+		<div class="col-md-5 col-md-offset-0 bg-warning">
+		<h2>Or select a bio to review</h2>
+		<ul>
+			{{#each b in bioData}}   
+				{{> bioReview bio=b}}
+			
+		{{/each}}
+		</ul>
+		</div>
+	</div>
+
+</template >
+	
+
+<template name="bioReview">
+
+	<li><a href="/newBio/{{bio._id}}">{{bio.name}}</a>
+	<span class="js-delete glyphicon glyphicon-remove" aria-hidden="true"></span>
+	</li>
+
+</template>
+
+<template name="newBio">
+	<div class="jumbotron">
+	<h1>{{name}}</h1>
+	<p>{{content}}</p>
+	</div>
+</template>

@@ -32,6 +32,14 @@ Meteor.methods({
 	},
 
 
+
+	removeBio :function(id){
+		check(id,String);
+		console.log(id);
+		console.log("removing bio");
+		Bio.remove(id);
+	},
+
 	getInfo:function(name,weight,height){
 		check(name,String);
 		check(weight,Number);
@@ -66,6 +74,20 @@ Meteor.methods({
 		Room.insert(roomOBJ);
 		console.log("do we get here");
 	},
+
+	createBio: function(name,bio_content){
+		check(name,String);
+		check(bio_content,String);
+		const username=name;
+		const bio=bio_content;
+		const bioOBJ={
+			name:name,
+			content:bio,
+
+		}
+		Bio.insert(bioOBJ);
+
+	}
 
 	
 
