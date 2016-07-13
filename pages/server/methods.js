@@ -56,23 +56,24 @@ Meteor.methods({
 	},
 
 	createRoom: function(name,numb1,numb2,date){
-		check(name,Number);
-		check(numb1,Number);
-		check(numb2,Number);
-		check(date,String);
+		// check(name,String);
+		// check(numb1,Number);
+		// check(numb2,Number);
+		// check(date,Number);
+		const roomname=name;
 		const starttime=numb1;
 		const endtime=numb2;
 		const dateReserve=date;
 
 		console.log("you're creating the room");
 		const roomOBJ={
-			name:name,
+			name:roomname,
 			timefrom:starttime,
 			timeto:endtime,
 			days:dateReserve,
 		}
 		Room.insert(roomOBJ);
-		console.log("do we get here");
+		console.log("This is after insert the roomOBJ");
 	},
 
 	createBio: function(name,bio_content){
