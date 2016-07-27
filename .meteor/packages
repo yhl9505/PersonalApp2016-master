@@ -24,3 +24,9 @@ accounts-password
 ian:accounts-ui-bootstrap-3
 reactive-dict
 check
+tsega:bootstrap3-datetimepicker
+momentjs:moment
+fullcalendar:fullcalendar
+aldeed:collection2
+session
+themeteorchef:bert
