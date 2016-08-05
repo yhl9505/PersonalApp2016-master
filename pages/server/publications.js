@@ -5,7 +5,9 @@ Meteor.publish("theComments",function(){return Comments.find({});})
 
 Meteor.publish("theBio",function(){return Bio.find({});})
 Meteor.publish("theEvents",function(){return Events.find({});})
+Meteor.publish("theRating",function(){return Rating.find({});})
 
+Meteor.publish("theDonations",function(){return Donations.find({});})
 
 Meteor.publish("userData",function(){
 	if(this.userId){ //only if you login can you see it

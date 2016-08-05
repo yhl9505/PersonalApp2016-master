@@ -133,6 +133,11 @@ Meteor.methods({
     	} catch ( exception ) {
       		throw new Meteor.Error( '500', `${ exception }` );
     	}
+  	},
+
+
+  	addRating(rating_OBJ){
+  		Rating.insert(rating_OBJ);
   	}
 
 
